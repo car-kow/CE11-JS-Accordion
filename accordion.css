@@ -28,6 +28,25 @@
   background-color: silver;/* Changes the background color when hovering */
 }
 
+.accordion-button-four {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: darkmagenta;
+  text-align: left;
+  padding: 1rem 0.5rem;
+  background-color: lightskyblue;
+  border: 1px solid darkmagenta;
+  border-radius: 1rem;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 0.5rem;
+  transition: all 1s ease-in-out;
+}
+
+.accordion-button-four:hover {
+  background-color: lightgreen;
+}
+
 
 /* Arrow styling
 ----------------------------------*/
@@ -37,11 +56,21 @@
   transition: all 0.3s ease; /* Speed of arrow rotation animation */
 }
 
+.accordion-arrow-four {
+  display: inline-block;
+  margin-right: 0.5rem;
+  transition: all 0.5 ease;
+}
+
 
 /* Rotate arrow when open
 ----------------------------------*/
 .accordion-button.open .accordion-arrow {
   transform: rotate(90deg); /* Rotates arrow 90 degrees when accordion is open */
+}
+
+.accordion-button-four.open .accordion-arrow-four {
+  transform: rotate(90deg);
 }
 
 
@@ -59,6 +88,18 @@
   transition: all 0.5s ease; /* Speed of open/close animation */
 }
 
+.accordion-content-four {
+  max-height: 0;
+  overflow: hidden;
+  background-color: lightgreen;
+  border-radius: 1rem;
+  border-top: none;
+  padding: 0 1rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  transition: all 1s ease;
+}
+
 
 /* Open content state
 ----------------------------------*/
@@ -69,10 +110,10 @@
   padding: 1rem; /* Adds full padding when open */
 }
 
-
-
-
-
+.accordion-content-four.open {
+  max-height: 200px;
+  padding: 1rem;
+}
 
 
 /* Basic page styles
